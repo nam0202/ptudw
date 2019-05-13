@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bài 6</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header class="header">
+        <br>
+        <br>
+    </header>
+    <div class="">
+        <div class="row">
+            <div class="col-9" style="margin-left: 10%;margin-right: 10%;">
+            <div style="margin-left: 10%">
+                <div class="form-group row" name="nameType" id="">
+                    <div class="col-2 text-left" style="color: blue">
+                    <label><b>Chọn tập tin:</b></label> 
+                    </div>
+                    <input type="file" id="browse" name="fileupload" style="display: none" onChange="Handlechange();"/>
+                      <input type="text" id="filename" readonly="true" style="width:60%; margin-right: 20px"/>
+                      <input type="button" value="Browse" id="fakeBrowse" onclick="HandleBrowseClick();"/></td>
+                </div>
+                <div class="form-group row" name="nameType" id="">
+                    <div class="col-11" style="text-align: center">
+                        <button style="width: 20%" onclick="myFunction()">Upload</button>
+                    </div>
+                </div>
+                <div class="form-group row" name="nameType" id="">
+                    <div class="col-4 text-left" style="color: blue">
+                        <p id="demo" style="color: brown"></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var fileName = document.getElementById("filename").value;
+            if(fileName.length > 0){
+                document.getElementById("demo").innerHTML = "Upload thành công";
+            } else {
+                document.getElementById("demo").innerHTML = "Upload thất bại";
+            }
+        }
+      function HandleBrowseClick()
+      {
+        var fileinput = document.getElementById("browse");
+        fileinput.click();
+      }
+
+      function Handlechange()
+      {
+          var fileinput = document.getElementById("browse");
+          var textinput = document.getElementById("filename");
+          textinput.value = fileinput.value;
+      }
+    </script>
+   </body>
+</html>

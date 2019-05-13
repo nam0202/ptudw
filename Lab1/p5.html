@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bài 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap-4.0.0/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header class="header">
+        <div class="row" style="margin-right: 10%;margin-left: 10%;">
+          <div class="col-12 text-left">
+            <h2 style="text-align: center;color: royalblue">Gửi Bài Tập Lớn</h2>
+            <br>
+          </div>
+        </div>
+    </header>
+    <div>
+    <div class="container" style="padding: 0 100px;">
+        <div class="row">
+         <table class="table table-bordered" style="color:royalblue;border: 2px">
+            <tbody>
+                <tr>
+                    <td style="width: 25%;">Tên sinh viên(*):</td>
+                    <td style="width: 60%;"><input type="text" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%;">Lớp(*):</td>
+                    <td style="width: 60%;"><input type="text" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%;">Ngày gửi bài</td>
+                    <td style="width: 60%;"><input type="text" style="width: 100%;" placeholder="3/9/2005"></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%;">Bài tập sẽ gửi(*):</td>
+                    <td style="width: 60%;">
+                      <input type="file" id="browse" name="fileupload" style="display: none" onChange="Handlechange();"/>
+                      <input type="text" id="filename" readonly="true" style="width:90.5%"/>
+                      <input type="button" value="Browse" id="fakeBrowse" onclick="HandleBrowseClick();"/></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%;">Địa chỉ liên hệ:</td>
+                    <td style="width: 60%;"><input type="text" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%;">E-mail:</td>
+                    <td style="width: 60%;"><input type="text" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%;">Ghi chú</td>
+                    <td style="width: 60%; overflow-y: scroll;"><textarea name="" id="" cols="100" rows="5"></textarea></td>
+                </tr>
+            </tbody>
+            </table>
+            <div class="col-12" style="text-align: center">
+                <button>Lưu lại</button>
+                <button>Làm lại</button>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      function HandleBrowseClick()
+      {
+        var fileinput = document.getElementById("browse");
+        fileinput.click();
+      }
+
+      function Handlechange()
+      {
+          var fileinput = document.getElementById("browse");
+          var textinput = document.getElementById("filename");
+          textinput.value = fileinput.value;
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
